@@ -1,0 +1,12 @@
+On the reciver tag in Android manifest where the intent filter is present
+    add  android:exported="true" => to reciver tag to avoid the app crash 
+    
+
+
+<receiver  android:exported="true" android:name="com.dieam.reactnativepushnotification.modules.RNPushNotificationBootEventReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="com.htc.intent.action.QUICKBOOT_POWERON"/>
+            </intent-filter>
+</receiver>
